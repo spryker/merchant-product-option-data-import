@@ -13,8 +13,6 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 
 /**
  * @method \Spryker\Zed\MerchantProductOptionDataImport\Business\MerchantProductOptionDataImportBusinessFactory getFactory()
- * @method \Spryker\Zed\MerchantProductOptionDataImport\Persistence\MerchantProductOptionDataImportRepositoryInterface getRepository()
- * @method \Spryker\Zed\MerchantProductOptionDataImport\Persistence\MerchantProductOptionDataImportEntityManagerInterface getEntityManager()
  */
 class MerchantProductOptionDataImportFacade extends AbstractFacade implements MerchantProductOptionDataImportFacadeInterface
 {
