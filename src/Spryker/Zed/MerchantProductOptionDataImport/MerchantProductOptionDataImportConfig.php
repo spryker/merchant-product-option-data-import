@@ -29,9 +29,6 @@ class MerchantProductOptionDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($moduleDataImportDirectory . 'merchant_product_option_group.csv', static::IMPORT_TYPE_MERCHANT_PRODUCT_OPTION_GROUP);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

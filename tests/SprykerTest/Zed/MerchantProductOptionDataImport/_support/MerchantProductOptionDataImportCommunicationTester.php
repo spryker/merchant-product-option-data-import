@@ -30,25 +30,16 @@ class MerchantProductOptionDataImportCommunicationTester extends Actor
 {
     use _generated\MerchantProductOptionDataImportCommunicationTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureMerchantProductOptionGroupTableIsEmpty(): void
     {
         $this->getMerchantProductOptionGroupQuery()->deleteAll();
     }
 
-    /**
-     * @return void
-     */
     public function assertMerchantProductOptionGroupTableContainsData(): void
     {
         $this->assertTrue($this->getMerchantProductOptionGroupQuery()->count() > 0);
     }
 
-    /**
-     * @return \Orm\Zed\MerchantProductOption\Persistence\SpyMerchantProductOptionGroupQuery
-     */
     protected function getMerchantProductOptionGroupQuery(): SpyMerchantProductOptionGroupQuery
     {
         return SpyMerchantProductOptionGroupQuery::create();

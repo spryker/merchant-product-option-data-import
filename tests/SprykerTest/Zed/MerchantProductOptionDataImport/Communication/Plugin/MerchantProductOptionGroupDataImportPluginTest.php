@@ -32,9 +32,6 @@ class MerchantProductOptionGroupDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         // Arrange
@@ -56,9 +53,6 @@ class MerchantProductOptionGroupDataImportPluginTest extends Unit
         $this->tester->assertMerchantProductOptionGroupTableContainsData();
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Act

@@ -22,9 +22,6 @@ use Spryker\Zed\MerchantProductOptionDataImport\Business\Model\Step\ProductOptio
  */
 class MerchantProductOptionDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getMerchantProductOptionGroupDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig(
@@ -43,33 +40,21 @@ class MerchantProductOptionDataImportBusinessFactory extends DataImportBusinessF
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createProductOptionGroupKeyToIdProductOptionGroupStep(): DataImportStepInterface
     {
         return new ProductOptionGroupKeyToIdProductOptionGroupStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantReferenceValidatorStep(): DataImportStepInterface
     {
         return new MerchantReferenceValidatorStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createApprovalStatusValidatorStep(): DataImportStepInterface
     {
         return new ApprovalStatusValidatorStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantProductOptionGroupWriterStep(): DataImportStepInterface
     {
         return new MerchantProductOptionGroupWriterStep();
